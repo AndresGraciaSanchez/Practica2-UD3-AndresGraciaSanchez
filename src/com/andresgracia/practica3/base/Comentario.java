@@ -7,7 +7,7 @@ import java.util.Objects;
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
-@Table(name = "comentarios", schema = "tienda_software_open_source", catalog = "")
+@Table(name = "comentarios", schema = "tienda_software_open_source")
 public class Comentario {
     private int id;
     private String contenido;
@@ -91,5 +91,10 @@ public class Comentario {
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
+    }
+
+    @Override
+    public String toString() {
+        return cliente.getNombre() + " - " + contenido;
     }
 }

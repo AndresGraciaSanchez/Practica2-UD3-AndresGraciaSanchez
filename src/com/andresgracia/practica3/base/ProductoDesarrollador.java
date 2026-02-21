@@ -5,9 +5,10 @@ import java.sql.Date;
 import java.util.Objects;
 
 @Entity
-@Table(name = "productos_desarrolladores", schema = "tienda_software_open_source", catalog = "")
+@Table(name = "productos_desarrolladores", schema = "tienda_software_open_source")
 @IdClass(ProductoDesarrolladorPK.class)
 public class ProductoDesarrollador {
+
     private int idProducto;
     private int idDesarrollador;
     private String rol;
@@ -16,7 +17,7 @@ public class ProductoDesarrollador {
     private Desarrollador desarrollador;
 
     @Id
-    @Column(name = "id_producto")
+    @Column(name = "id_producto", insertable = false, updatable = false)
     public int getIdProducto() {
         return idProducto;
     }
@@ -26,7 +27,7 @@ public class ProductoDesarrollador {
     }
 
     @Id
-    @Column(name = "id_desarrollador")
+    @Column(name = "id_desarrollador", insertable = false, updatable = false)
     public int getIdDesarrollador() {
         return idDesarrollador;
     }
@@ -72,7 +73,8 @@ public class ProductoDesarrollador {
     }
 
     @ManyToOne
-    @JoinColumn(name = "id_producto", referencedColumnName = "id", nullable = false)
+    @JoinColumn(name = "id_producto", referencedColumnName = "id", nullable = false,
+            insertable = false, updatable = false)
     public Producto getProducto() {
         return producto;
     }
@@ -82,7 +84,8 @@ public class ProductoDesarrollador {
     }
 
     @ManyToOne
-    @JoinColumn(name = "id_desarrollador", referencedColumnName = "id", nullable = false)
+    @JoinColumn(name = "id_desarrollador", referencedColumnName = "id", nullable = false,
+            insertable = false, updatable = false)
     public Desarrollador getDesarrollador() {
         return desarrollador;
     }

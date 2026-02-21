@@ -8,7 +8,7 @@ import java.util.Objects;
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
-@Table(name = "productos", schema = "tienda_software_open_source", catalog = "")
+@Table(name = "productos", schema = "tienda_software_open_source")
 public class Producto {
     private int id;
     private String nombre;
@@ -137,5 +137,10 @@ public class Producto {
 
     public void setProductosDesarrolladores(List<ProductoDesarrollador> productosDesarrolladores) {
         this.productosDesarrolladores = productosDesarrolladores;
+    }
+
+    @Override
+    public String toString() {
+        return nombre + " - " + version + " (" + licencia + ")";
     }
 }

@@ -8,7 +8,7 @@ import java.util.Objects;
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
-@Table(name = "clientes", schema = "tienda_software_open_source", catalog = "")
+@Table(name = "clientes", schema = "tienda_software_open_source")
 public class Cliente {
     private int id;
     private String nombre;
@@ -116,5 +116,10 @@ public class Cliente {
 
     public void setComentarios(List<Comentario> comentarios) {
         this.comentarios = comentarios;
+    }
+
+    @Override
+    public String toString() {
+        return nombre + " - " + empresa;
     }
 }
