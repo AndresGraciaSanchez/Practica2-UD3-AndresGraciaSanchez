@@ -62,7 +62,7 @@ public class Controlador implements ActionListener, ListSelectionListener {
                 break;
 
             case "Opciones":
-                Util.mensajeInformacion("Práctica 3 - Tienda Software Open Source\nVersión 1.0");
+                Util.mensajeInformacion("Practica 2 - UD3 - Tienda de Software\n1.0");
                 break;
 
             case "crearProducto":
@@ -84,7 +84,7 @@ public class Controlador implements ActionListener, ListSelectionListener {
                     Producto productoModificado = (Producto) vista.listaProductos.getSelectedValue();
                     actualizarProductoDesdeCampos(productoModificado);
                     modelo.modificarProducto(productoModificado);
-                    Util.mensajeInformacion("Producto modificado correctamente");
+                    Util.mensajeInformacion("Modificado correctamente");
                     listarTodo();
                     limpiarCamposProducto();
                 }
@@ -95,10 +95,10 @@ public class Controlador implements ActionListener, ListSelectionListener {
                     Util.mensajeError("Debes seleccionar alguno antes de eliminar");
                     return;
                 }
-                if (Util.mensajeConfirmacion("¿Estás seguro de eliminar este producto?")) {
+                if (Util.mensajeConfirmacion("¿Deseas eliminarlo?")) {
                     Producto productoEliminado = (Producto) vista.listaProductos.getSelectedValue();
                     modelo.borrarProducto(productoEliminado);
-                    Util.mensajeInformacion("Producto eliminado correctamente");
+                    Util.mensajeInformacion("Eliminado correctamente");
                     listarTodo();
                     limpiarCamposProducto();
                 }
@@ -123,7 +123,7 @@ public class Controlador implements ActionListener, ListSelectionListener {
                     Cliente clienteModificado = (Cliente) vista.listaClientes.getSelectedValue();
                     actualizarClienteDesdeCampos(clienteModificado);
                     modelo.modificarCliente(clienteModificado);
-                    Util.mensajeInformacion("Cliente modificado correctamente");
+                    Util.mensajeInformacion("Modificado correctamente");
                     listarTodo();
                     limpiarCamposCliente();
                 }
@@ -134,10 +134,10 @@ public class Controlador implements ActionListener, ListSelectionListener {
                     Util.mensajeError("Debes seleccionar alguno antes de eliminar");
                     return;
                 }
-                if (Util.mensajeConfirmacion("¿Estás seguro de eliminar este cliente?")) {
+                if (Util.mensajeConfirmacion("¿Deseas eliminarlo?")) {
                     Cliente clienteEliminado = (Cliente) vista.listaClientes.getSelectedValue();
                     modelo.borrarCliente(clienteEliminado);
-                    Util.mensajeInformacion("Cliente eliminado correctamente");
+                    Util.mensajeInformacion("Eliminado correctamente");
                     listarTodo();
                     limpiarCamposCliente();
                 }
@@ -162,7 +162,7 @@ public class Controlador implements ActionListener, ListSelectionListener {
                     Desarrollador desarrolladorModificado = (Desarrollador) vista.listaDesarrolladores.getSelectedValue();
                     actualizarDesarrolladorDesdeCampos(desarrolladorModificado);
                     modelo.modificarDesarrollador(desarrolladorModificado);
-                    Util.mensajeInformacion("Desarrollador modificado correctamente");
+                    Util.mensajeInformacion("Modificado correctamente");
                     listarTodo();
                     limpiarCamposDesarrollador();
                 }
@@ -173,10 +173,10 @@ public class Controlador implements ActionListener, ListSelectionListener {
                     Util.mensajeError("Debes seleccionar alguno antes de eliminar");
                     return;
                 }
-                if (Util.mensajeConfirmacion("¿Estás seguro de eliminar este desarrollador?")) {
+                if (Util.mensajeConfirmacion("¿Deseas eliminarlo?")) {
                     Desarrollador desarrolladorEliminado = (Desarrollador) vista.listaDesarrolladores.getSelectedValue();
                     modelo.borrarDesarrollador(desarrolladorEliminado);
-                    Util.mensajeInformacion("Desarrollador eliminado correctamente");
+                    Util.mensajeInformacion("Eliminado correctamente");
                     listarTodo();
                     limpiarCamposDesarrollador();
                 }
@@ -201,7 +201,7 @@ public class Controlador implements ActionListener, ListSelectionListener {
                     Categoria categoriaModificada = (Categoria) vista.listaCategorias.getSelectedValue();
                     actualizarCategoriaDesdeCampos(categoriaModificada);
                     modelo.modificarCategoria(categoriaModificada);
-                    Util.mensajeInformacion("Categoría modificada correctamente");
+                    Util.mensajeInformacion("Modificada correctamente");
                     listarTodo();
                     limpiarCamposCategoria();
                 }
@@ -212,10 +212,10 @@ public class Controlador implements ActionListener, ListSelectionListener {
                     Util.mensajeError("Debes seleccionar alguna antes de eliminar");
                     return;
                 }
-                if (Util.mensajeConfirmacion("¿Estás seguro de eliminar esta categoría?")) {
+                if (Util.mensajeConfirmacion("¿Deseas eliminarla?")) {
                     Categoria categoriaEliminada = (Categoria) vista.listaCategorias.getSelectedValue();
                     modelo.borrarCategoria(categoriaEliminada);
-                    Util.mensajeInformacion("Categoría eliminada correctamente");
+                    Util.mensajeInformacion("Eliminada correctamente");
                     listarTodo();
                     limpiarCamposCategoria();
                 }
@@ -240,7 +240,7 @@ public class Controlador implements ActionListener, ListSelectionListener {
                     Comentario comentarioModificado = (Comentario) vista.listaComentarios.getSelectedValue();
                     actualizarComentarioDesdeCampos(comentarioModificado);
                     modelo.modificarComentario(comentarioModificado);
-                    Util.mensajeInformacion("Comentario modificado correctamente");
+                    Util.mensajeInformacion("Modificado correctamente");
                     listarTodo();
                     limpiarCamposComentario();
                 }
@@ -251,10 +251,10 @@ public class Controlador implements ActionListener, ListSelectionListener {
                     Util.mensajeError("Debes seleccionar alguno antes de eliminar");
                     return;
                 }
-                if (Util.mensajeConfirmacion("¿Estás seguro de eliminar este comentario?")) {
+                if (Util.mensajeConfirmacion("¿Deseas eliminarlo?")) {
                     Comentario comentarioEliminado = (Comentario) vista.listaComentarios.getSelectedValue();
                     modelo.borrarComentario(comentarioEliminado);
-                    Util.mensajeInformacion("Comentario eliminado correctamente");
+                    Util.mensajeInformacion("Eliminado correctamente");
                     listarTodo();
                     limpiarCamposComentario();
                 }
@@ -414,11 +414,6 @@ public class Controlador implements ActionListener, ListSelectionListener {
 
         Producto producto = (Producto) vista.comboBoxProductoComentario.getSelectedItem();
         Cliente cliente = (Cliente) vista.comboBoxClienteComentario.getSelectedItem();
-
-        if (producto == null || cliente == null) {
-            Util.mensajeError("Debes seleccionar un producto y un cliente para el comentario");
-            return null;
-        }
 
         comentario.setProducto(producto);
         comentario.setCliente(cliente);
@@ -724,16 +719,15 @@ public class Controlador implements ActionListener, ListSelectionListener {
     }
 
     private void cargarComentariosProductoEnTabla(ArrayList<Comentario> comentarios) {
-        String[] columnas = {"Cliente", "Contenido", "Calificación", "Fecha"};
+        String[] columnas = {"Cliente", "Contenido", "Calificacion", "Fecha"};
         Object[][] datos = new Object[comentarios.size()][4];
 
         for (int i = 0; i < comentarios.size(); i++) {
             Comentario c = comentarios.get(i);
-            datos[i][0] = c.getCliente() != null ? c.getCliente().getNombre() : "Cliente desconocido";
-            datos[i][1] = c.getContenido() != null ?
-                    (c.getContenido().length() > 50 ? c.getContenido().substring(0, 50) + "..." : c.getContenido()) : "";
-            datos[i][2] = c.getCalificacion() + " ★";
-            datos[i][3] = c.getFechaComentario() != null ? c.getFechaComentario().toString() : "";
+            datos[i][0] = c.getCliente();
+            datos[i][1] = c.getContenido();
+            datos[i][2] = c.getCalificacion();
+            datos[i][3] = c.getFechaComentario();
         }
 
         vista.tablaComentariosProducto.setModel(new DefaultTableModel(datos, columnas) {
@@ -746,16 +740,15 @@ public class Controlador implements ActionListener, ListSelectionListener {
     }
 
     private void cargarComentariosClienteEnTabla(ArrayList<Comentario> comentarios) {
-        String[] columnas = {"Producto", "Contenido", "Calificación", "Fecha"};
+        String[] columnas = {"Producto", "Contenido", "Calificacion", "Fecha"};
         Object[][] datos = new Object[comentarios.size()][4];
 
         for (int i = 0; i < comentarios.size(); i++) {
             Comentario c = comentarios.get(i);
-            datos[i][0] = c.getProducto() != null ? c.getProducto().getNombre() : "Producto desconocido";
-            datos[i][1] = c.getContenido() != null ?
-                    (c.getContenido().length() > 50 ? c.getContenido().substring(0, 50) + "..." : c.getContenido()) : "";
-            datos[i][2] = c.getCalificacion() + " ★";
-            datos[i][3] = c.getFechaComentario() != null ? c.getFechaComentario().toString() : "";
+            datos[i][0] = c.getProducto();
+            datos[i][1] = c.getContenido();
+            datos[i][2] = c.getCalificacion();
+            datos[i][3] = c.getFechaComentario();
         }
 
         vista.tablaComentariosCliente.setModel(new DefaultTableModel(datos, columnas) {
@@ -768,15 +761,15 @@ public class Controlador implements ActionListener, ListSelectionListener {
     }
 
     private void cargarProductosCategoriaEnTabla(ArrayList<Producto> productos) {
-        String[] columnas = {"Producto", "Versión", "Precio", "Licencia", "Descargas"};
+        String[] columnas = {"Producto", "Version", "Precio", "Licencia", "Descargas"};
         Object[][] datos = new Object[productos.size()][5];
 
         for (int i = 0; i < productos.size(); i++) {
             Producto p = productos.get(i);
             datos[i][0] = p.getNombre();
             datos[i][1] = p.getVersion();
-            datos[i][2] = p.getPrecio() + " €";
-            datos[i][3] = p.getLicencia() != null ? p.getLicencia().toString() : "";
+            datos[i][2] = p.getPrecio();
+            datos[i][3] = p.getLicencia();
             datos[i][4] = p.getDescargasTotales();
         }
 
